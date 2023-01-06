@@ -1,5 +1,6 @@
 import string
 import random
+import sys
 
 ## characters to generate password from
 charactersLowerCase = list(string.ascii_letters.lower())
@@ -25,3 +26,10 @@ def GeneratePW(upper, lower, digits, special):
     print(''.join(PW))
 
 GeneratePW(charactersUpperCase, charactersLowerCase, digits, specialCharacters)
+
+while True:
+    choice = input("Create different password? yes/no:  ")
+    if choice == "yes":
+        GeneratePW(charactersUpperCase, charactersLowerCase, digits, specialCharacters)
+    else:
+        sys.exit()
